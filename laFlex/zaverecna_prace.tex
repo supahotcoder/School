@@ -1,0 +1,219 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{listings}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\title{Zápočtová práce psaná v \LaTeX}
+\date{9. prosince 2017}
+\author{Jan Czerný}
+
+\begin{document}
+\begin{titlepage}
+\maketitle
+\begin{center}
+\includegraphics{UP_logo_stred_cz}
+\end{center}
+\end{titlepage}
+
+\section{Obsah}
+\tableofcontents
+\newpage
+
+\section{Úvod}
+ Úvodem zde vypíšu  \uv{\it{náhodné}} články Necyklopedie jako hlavní zdroj textu.\newline
+\textbf{Upozornění:} Prosím \underline{neberte} tenhle text vážně, nechci tím nijak urazit jakoukoli osobu, nebo čtenáře.
+\subsection{Poznámkový blok}
+Poznámkový blok je jediným dokonalým výtvorem z dílny jinak velice nevypočitatelného Microsoftu.\newline \newline Jeho vývoj byl definován takto:
+zbavit Microsoft Word všech zbytečností, které stejně nikdo rozumný ke své práci nepotřebuje
+\newline \newline Poznámkový blok se stal okamžitě nesmírně populárním a našel si své stálé místo v lištách po celém světě: studenti v něm píší celé diplom práce, milenci své zamilované dopisy (při nichž je obzvlášť nutné, aby aplikace nespadla, protože by se už nikdy nemuselo podařit dát dohromady tolik slov), případně spisovatelé románů a scénáristé seriálů. Nepublikovaným faktem například zůstává skutečnost, že je Poznámkový blok používán především scénáristy tzv. nekonečných seriálů, kde si opravdu nikdo nemůže dovolit, aby se o práci přišlo třeba u 4973. dílu Ulice (povšimněte si, že 4973 JE prvočíslo).\newline
+\newline Za zdánlivě nenápadným UI se skrývají tisíce hodin brainstormingu, brainwashingu, programování a testování. Steve Jobs, posedlý potřebou vše zjednodušovat a dotahovat do naprosté dokonalosti, měl na svých Apple počítačích vždy nainstalované i Windows právě kvůli Poznámkovému bloku. Prostřednictvím této aplikace řídil celou firmu a nechal v ní vzniknout všechny své nápady.
+\subsubsection{Adresářová struktura linuxu}
+\begin{itemize}
+ \item /boot – (anglicky bota) jedná se o botník systému, zde si můžete uložit různé verze jádra podobně jako různé druhy bot do botníku
+ \item /dev – v tomto adresáři jsou data deviantů
+ \item /dev/null – jedná se o černou díru, kde se ztrácejí data, pracuje na principu pamětí WOM
+ \item /etc – zkratka (a tak dále) naznačuje, že se tímto adresářem s konfigurací není třeba zabývat
+ \item /home – zde ukládej p\ldots rno
+ \item /root – složka Chucka Norrise, sem nemáte přístup (nepokoušejte se ho obejít, odkáže vás do /dev/null)
+ \item /usr – United States of Russia (zde je uložen špionážní software)
+ \item /usr/local – místní hospoda (sem chodí tučňáci na pivo)
+ \item /var – skupenská přeměna, při které se kapalina mění na plyn v celém svém objemu (zdroj: Českopedie)
+ \item /proc – makroprocesor, (zde makají tučňáci, když zrovna nepijí pivo)
+\end{itemize}
+\subsubsection{Příklad jak funguje tabulka}
+\begin{center}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{část} & \textbf{umístění} & \textbf{charakteristika} \\ \hline
+buňka & v tabulce & To je takový ten čtvereček uvnitř tabulky. \\ \hline
+řádek & v tabulce & To je, když je několik buněk vedle sebe. \\ \hline
+sloupec & v tabulce & To je, když je několik buněk nad sebou \\ \hline
+\end{tabular}
+\end{center}
+\newpage
+\section{Zdrojový kód}
+\subsection{OSTRAJava}
+\Large
+Ukázka dědičnosti v OSTRAJava \cite{ostrajava}
+\normalsize
+\begin{lstlisting}
+banik pyco
+
+tryda Obdelnik{
+   toz cyslo dylka pyco
+   toz cyslo vyska pyco
+
+   Obdelnik(cyslo dylka, cyslo vyska){
+      joch.dylka = dylka pyco
+      joch.vyska = vyska pyco
+   }
+}
+
+tryda Stverec fagan od Obdelnik{
+    Stverec(cyslo velikost){
+       forant(velikost, velikost) pyco
+    }
+} 
+
+tryda Ostrava{
+   rynek(){
+      toz Stverec s = zrob Stverec(5) pyco 
+   }
+}
+
+fajront pyco
+\end{lstlisting}
+\newpage
+\subsection{See-sharp}
+\Large
+Ukázka přehledného a jednoduchého vytvoření souboru v C\# \cite{divejseostre}
+\normalsize
+\begin{lstlisting}
+string cesta = "";
+try
+{
+       cesta = Path.Combine(Environment.
+       	GetFolderPath(Environment.
+       	SpecialFolder.
+       	ApplicationData), "Nazev slozky");
+       	
+       if (!Directory.Exists(cesta))
+               Directory.CreateDirectory(cesta);
+}
+catch
+{
+       Console.WriteLine("Nepodarilo se vytvorit slozku {0},
+        zkontrolujte prosim sva opravneni.", cesta);
+}
+if (File.Exists(Path.Combine(cesta, "databaze.dat")))
+{
+       try
+       {
+               
+       }
+       catch (Exception e)
+       {
+               Console.WriteLine("Pri nacitani nastaveni doslo k
+                nasledujici chybe: {0}", e.Message);
+       }
+}
+else
+{
+       try
+       {
+               
+       }
+       catch (Exception e)
+       {
+               Console.WriteLine("Pri vytvoreni nastaveni doslo k
+                nasledujici chybe: {0}", e.Message);
+       }
+}
+\end{lstlisting}
+\section{Matematika}
+\newtheorem{theorem}{Věta}
+\begin{theorem}[42]
+Matematická definice všeho.
+\end{theorem}
+$\sqrt{ -1} \iff $ 
+$ \log(0) \iff $ 
+$ \infty = - \infty \iff $ 
+$ \frac{x}{0} = 0$ 
+$\iff \pi= 3.14 $
+\[
+\sum_{1 = 0}^{ \left[ \frac{\aleph}{\lambda} \right] }
+\sqrt{ x_{\wp, \wp + \Xi}^{\wp^{\Upsilon}} }
+{ \left[ \frac{\wp + \varpi}{\varpi} \right] }
+\frac{ \sqrt{ \mu(1)^{ \frac{\varpi}{\lambda}} (\wp^{\Upsilon} - \Xi) } }
+{ \sqrt[\varpi]{\rho(\wp) - \Upsilon} + \sqrt[\lambda]{\rho(\wp) - \Xi} }
+ = \lambda + 1 \]
+\begin{proof}
+Triviální.
+\end{proof}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definice}
+\begin{definition}
+Podívejte se pozorně na tento algebraický důkaz a řekněte, jestli mu rozumíte. Pokud ano, tak jste lhář. \cite{lhar}
+\end{definition}
+
+\begin{figure}{Obrázek 1: Zápočtová situace}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    title={ \textbf{Průběh školy a motivace}},
+    xmin=0, xmax=3,
+    ymin=0, ymax=100,
+    xtick={0,1,2,3},
+    ytick={0,20,40,60,80,100},
+    xlabel={ Postup školy},
+    ylabel={\textit{Motivace v \%}},
+]
+  \node [shape=rectangle,draw=blue](a) at (80,80)  { Zápočet };
+  \node [shape=rectangle,draw=blue](b) at (40,60)  { Zápočet };
+  \node [shape=rectangle,draw=blue](c) at (65,10)  { Zápočet };
+  \node [shape=rectangle,draw=blue](d) at (170,70) { Zápočet };
+  \node [shape=rectangle,draw=blue](e) at (225,40)  { Zápočet };
+  \node [shape=circle,draw=red,very thick](f) at (140,25)  { Já };
+  \draw[->] (a) edge[bend right=30]  (f);
+  \draw[->] (b) edge[bend left=10] (f);
+  \draw[->] (c) edge[bend right=20] (f);
+  \draw[->] (d) edge[bend left=42] (f);
+  \draw[->] (e) edge[bend left=5] (f);
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\section{Komentář k bakalářské práci}
+Vybral jsem si bakalářskou práci \uv{Webová kuchařka} Terezy Balcárkové.
+\subsection{Co je dobře/špatně?}
+Líbí se mi, že text je hezky zarovnaný a že obsahuje všechny citace. \newline
+Špatně bych považoval hutnost textu v některých kapitolách, a celkově odsazení a text pod sekcí jde vidět v kapitole 2.
+\subsection{Typogragie, gramatika, struktura}
+Myslím, si že práce celkem odpovídá, až na nějaké typografické
+chyby jako přetékající text.  \newline
+V gramatice je v pořádku, dle mého názoru jakož, maturanta, který měl z češtiny 4. \newline
+Struktura dokumentu celkem v pořádku, až na zdrojové kódy, které
+jsou v textu nějak bez popisu.
+\subsection{Rozsah a styl citací}
+Citace odpovídá rozsahu na 1 A4 stranu. Citace jsou jak na knihy
+tak na webové stránky.
+
+\begin{thebibliography}{7}
+\bibitem{ostrajava}
+	OSTRAJava \newline
+	\url{https://github.com/tkohout/OSTRAJava}
+\bibitem{divejseostre}
+	C\# ,neboli (see sharp), jinak česky (viď ostře)\newline
+	\url{http://necyklopedie.wikia.com/wiki/C_Sharp}
+\bibitem{lhar}
+	Definice všeho: \newline
+	\url{http://necyklopedie.wikia.com/wiki/Hlavn%C3%AD_strana}
+\end{thebibliography}
+\end{document}
